@@ -7,10 +7,10 @@
 # Meta info #
 #############
 
-name: Save the Lock
-url: https://savethelock.org
+name: Save Security
+url: https://savesecurity.org
 petitions_api: http://0.0.0.0:9104
-description: Strong locks save lives.
+description: Strong security saves lives.
 timezone: America/New_York
 googleanalytics: UA-26576645-30
 
