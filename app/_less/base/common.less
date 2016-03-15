@@ -14,28 +14,19 @@ body {
   font-weight: 300;
   text-align: center;
 
-  &::before {
-    background-color: transparent;
-    border-bottom: dotted 1px @white;
-    content: ' ';
-    height: 4px;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 2rem 2rem 22rem;
+  width: 42rem;
 
-  &::after {
-    background: transparent;
-    border-right: dotted 1px @white;
-    bottom: 0;
-    content: ' ';
-    left: 0;
-    padding-left: 0;
-    position: absolute;
-    top: 0;
-    width: 4px;
-    z-index: 1;
+  > * {
+    margin: 2rem auto 6rem;
+    //max-width: 40rem;
+    opacity: 0;
+    //padding: 0 2rem;
+    &:not(header) {
+      .fadeIn(1000ms, 900ms);
+    }
   }
 }
 
@@ -59,7 +50,7 @@ h1 {
 h2 {
   font-size: 4.2rem;
   font-weight: 400;
-  margin-bottom: 1em;
+  margin-bottom: 0.6em;
 }
 
 h3 {
@@ -67,6 +58,7 @@ h3 {
 }
 
 header {
+  .fadeIn(1000ms, 0);
   h2 {
     font-size: 2.8rem;
 
@@ -97,18 +89,10 @@ strong {
   font-weight: 600;
 }
 
-article, form {
-  margin: 2rem auto 6rem;
-  max-width: 40rem;
-  padding: 0 2rem;
-}
-
 p {
   font-size: 1.9rem;
   line-height: 1.6;
-  margin: 0 auto 2rem;
-  max-width: 36ch;
-  width: 90%;
+  margin: 1rem auto 2rem;
 }
 
 ul {
