@@ -18,15 +18,22 @@
 form {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 1rem auto 2rem;
+  overflow: hidden;
   position: relative;
+  transition: height 400ms;
   width: 29.5rem;
-  flex-wrap: wrap;
+
+  &.removed {
+    height: 0;
+  }
 }
 
 [type="text"],
-[type="email"] {
+[type="email"],
+textarea {
   .text-form-elements();
 }
 

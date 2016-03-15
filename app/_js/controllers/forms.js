@@ -10,14 +10,14 @@ window.components.forms = function (doc, win) {
   var
     body = doc.getElementsByTagName('body')[0],
     submitButton = body.querySelector('[type="submit"]'),
-    submitted = $c('div'),
+    submitted = doc.createElement('div'),
     countryLabel = doc.querySelector('[for="select-country"]'),
     countrySelect = doc.getElementById('select-country'),
     countryInput = doc.getElementById('hidden-country'),
     commitmentForm = doc.forms[0];
 
   submitted.classList.add('submitted');
-  submitted.innerHTML = '<h2>Hang on a tick&hellip;</h2><h3>&hellip;reticulating splines.</h3><div class="circle-spinner">&nbsp;</div> '
+  submitted.innerHTML = '<h2>Hang on a tick&hellip;</h2><h3>&hellip;reticulating splines.</h3><div class="circle-spinner">&nbsp;</div>';
 
   function updateZIPPlaceholder() {
     /**
@@ -46,6 +46,13 @@ window.components.forms = function (doc, win) {
     countryLabel.classList.add('hidden');
   }
 
+  function removeForm() {
+    commitmentForm.setAttribute('style', 'height: ' + commitmentForm.clientHeight + 'px;');
+    win.setTimeout(function(){
+      commitmentForm.setAttribute('style', 'height: 0;');
+    }, 20)
+  }
+
   function handleSigningError(e) {
     /**
      * Figures out what to say at just the right moment
@@ -54,9 +61,8 @@ window.components.forms = function (doc, win) {
      * */
 
     var
-      errorMessageContainer = $c('div'),
-      errorMessage = $c('h2'),
-      errorMessageInfo = $c('p');
+      errorMessage = doc.createElement('h2'),
+      errorMessageInfo = doc.createElement('p');
 
     commitmentForm.removeAttribute('disabled');
     submitted.remove();
@@ -69,14 +75,7 @@ window.components.forms = function (doc, win) {
       errorMessageInfo.textContent = 'this seems to be a weird error. the nerds have been alerted.';
     }
 
-    errorMessageContainer.appendChild(errorMessage);
-    errorMessageContainer.appendChild(errorMessageInfo);
-    /*
-    new win.controllers.modals.PlainModalController({
-      modal_content: errorMessageContainer
-    });
-    */
-    alert(errorMessageInfo.textContent); // JL HACK ~ lol
+    win.modals.generateModal([errorMessage, errorMessageInfo]);
 
     submitted.remove();
     submitButton.removeAttribute('disabled');
@@ -90,23 +89,19 @@ window.components.forms = function (doc, win) {
      * */
 
     var
-      modalContent = $c('div');
+      modalContent = doc.createElement('div'),
+      share = doc.getElementsByClassName('share')[0];
 
-    /*
+    share.classList.add('visible');
     modalContent.innerHTML = '<h2>Thanks for signing</h2>\n<p>Now, share this page to spread the word.</p>\n<p><small>…or, <a href="https://donate.fightforthefuture.org/?amount=5&frequency=just-once">chip in $5</a> to help us spread the message.</small></p>';
-    modalContent.appendChild(doc.getElementById('share-modal'));
 
-    new win.controllers.modals.PlainModalController({
-      modal_content: modalContent
-    });
-    */
+    win.modals.generateModal([modalContent, share]);
+    removeForm();
   }
 
   function submitForm(event) {
     /**
-     * Submits the form to ActionNetwork. If the script doesn’t, by now, know
-     * the action_network identifier, default isn’t prevented on the event and
-     * form submission proceeds as normal.
+     * Submits the form to ActionNetwork.
      * @param {event} event - Form submission event
      * */
 
@@ -128,14 +123,15 @@ window.components.forms = function (doc, win) {
 
       var
         petitionFormData = {
-          identifier: '86ef7be3-da62-480c-ab42-4643c0f93be8',
+          identifier: 'dad151da-e162-4ec5-8679-655bfcb2d03f',
           website: win.location.origin,
           tags: JSON.parse(doc.querySelector('[name="subscription[tag_list]"]').value),
           noOptIn: false,
           name: doc.getElementById('form-first_name').value,
           email: doc.getElementById('form-email').value,
           ZIP: doc.getElementById('form-zip_code').value,
-          country: countrySelect.value
+          country: countrySelect.value,
+          comments: doc.getElementById('form-comments').value
         };
 
       return JSON.stringify(petitionFormData);
@@ -147,7 +143,7 @@ window.components.forms = function (doc, win) {
        * */
 
       if (commitmentStatus.status >= 200 && commitmentStatus.status < 400) {
-        handleSigningSuccess()
+        handleSigningSuccess();
       } else {
         handleSigningError(commitmentStatus);
       }
