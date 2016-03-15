@@ -17,7 +17,7 @@ window.components.forms = function (doc, win) {
     commitmentForm = doc.forms[0];
 
   submitted.classList.add('submitted');
-  submitted.innerHTML = '<h2>Hang on a tick&hellip;</h2><h3>&hellip;reticulating splines.</h3><div class="circle-spinner">&nbsp;</div> '
+  submitted.innerHTML = '<h2>Hang on a tick&hellip;</h2><h3>&hellip;reticulating splines.</h3><div class="circle-spinner">&nbsp;</div>';
 
   function updateZIPPlaceholder() {
     /**
@@ -123,14 +123,15 @@ window.components.forms = function (doc, win) {
 
       var
         petitionFormData = {
-          identifier: '86ef7be3-da62-480c-ab42-4643c0f93be8',
+          identifier: 'dad151da-e162-4ec5-8679-655bfcb2d03f',
           website: win.location.origin,
           tags: JSON.parse(doc.querySelector('[name="subscription[tag_list]"]').value),
           noOptIn: false,
           name: doc.getElementById('form-first_name').value,
           email: doc.getElementById('form-email').value,
           ZIP: doc.getElementById('form-zip_code').value,
-          country: countrySelect.value
+          country: countrySelect.value,
+          comments: doc.getElementById('form-comments').value
         };
 
       return JSON.stringify(petitionFormData);
