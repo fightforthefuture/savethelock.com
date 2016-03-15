@@ -156,7 +156,13 @@ module.exports = function (grunt) {
               '<%= site.app %>/_js/main.js'
             ],
             dest: '<%= site.dist %>/js/core.js'
-          }
+          },
+          {
+            src: [
+              '<%= site.app %>/_js/banner.js',
+            ],
+            dest: '<%= site.dist %>/banner.js'
+          },
         ]
       }
     },
@@ -170,7 +176,8 @@ module.exports = function (grunt) {
       },
       javascript: {
         files: {
-          '<%= site.dist %>/js/core.js': '<%= site.dist %>/js/core.js'
+          '<%= site.dist %>/js/core.js': '<%= site.dist %>/js/core.js',
+          '<%= site.dist %>/banner.js': '<%= site.dist %>/banner.js',
         }
       }
     },
