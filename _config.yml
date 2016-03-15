@@ -7,12 +7,20 @@
 # Meta info #
 #############
 
-name: Save the Lock
-url: https://savethelock.org
+url: https://savesecurity.org
 petitions_api: http://0.0.0.0:9104
-description: Strong locks save lives.
 timezone: America/New_York
 googleanalytics: UA-26576645-30
+
+################
+# Social Media #
+################
+
+name: Save Security
+description: Strong security saves lives.
+sharetitle: Don’t let the FBI backdoor Apple.
+sharedescription: This is way bigger than the iPhone…
+twittertext: Strong locks save lives. Don’t let the FBI backdoor Apple—this is way bigger than the iPhone.
 
 author:
   googleid: 102356128596404327231
@@ -25,7 +33,7 @@ author:
 
 future: true
 show_drafts: true
-permalink: /:title/ # See Jekyll documentation for permalink styles
+permalink: /:title/
 
 defaults:
   - scope:
