@@ -1,15 +1,10 @@
-header + p, form, section {
+header + p, form, article {
   opacity: 0;
   .fadeIn(1000ms, 900ms);
 }
 
 header + p {
   margin-bottom: 4.5rem;
-}
-
-form, section {
-  margin: 0 auto 7rem;
-  max-width: 70rem;
 }
 
 section {
@@ -79,68 +74,3 @@ section {
     text-align: center;
   }
 }
-
-
-.share-this-button-links {
-  a {
-    color: @white;
-    display: block;
-    font-size: 2.28rem;
-    font-variant: small-caps;
-    opacity: 0.9;
-    padding: 0.9rem 0 1.2rem;
-    text-align: center;
-    text-decoration: none;
-    text-transform: lowercase;
-    transition: opacity 150ms;
-    width: 100%;
-
-    @media screen and (min-width: @small-tablet) {
-      max-width: 35rem;
-    }
-
-    &:hover {
-      opacity: 1;
-    }
-
-    &::before {
-      background-color: transparent;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      content: '';
-      display: inline-block;
-      height: 2.9rem;
-      position: relative;
-      width: 2.9rem;
-    }
-
-    &.share-this-fb {
-      background-color: @facebook-blue;
-
-      &::before {
-        background-image: url('/images/fb-57.png');
-        top: 0.3rem;
-      }
-    }
-
-    &.share-this-tw {
-      background-color: @twitter-blue;
-
-      &::before {
-        background-image: url('/images/tw-57.png');
-        top: 0.8rem;
-      }
-    }
-
-    &.share-this-donate {
-      background-color: @blue-600;
-
-      &::before {
-        content: '\2665';
-        top: 0.1rem;
-      }
-    }
-  }
-}
-
