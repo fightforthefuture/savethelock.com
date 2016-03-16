@@ -1,14 +1,62 @@
 header {
-  background-image: url('/images/lock-bg.png');
-  background-position: center 5rem;
-  background-repeat: no-repeat;
-  background-size: 265px auto;
-  margin: 0rem auto 5rem auto;
-  padding-top: 39.5rem;
+  height: 100vh;
+  margin: 0 auto 5rem auto;
+  padding-top: 2rem;
+  position: relative;
   opacity: 0;
+  text-align: center;
+  width: 100vw;
   .fadeIn(1000ms);
 
-  h2 {
-    font-size: 2.1rem;
+  h1 {
+    font-size: 16.7vw;
+    font-variant: small-caps;
+    letter-spacing: -2px;
+    margin-bottom: 0;
+    text-transform: lowercase;
+    background-image: url('/images/lock-bg.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 109%;
+    max-width: 85%;
+    width: 35.1rem;
+
+    @media screen and (min-width: 415px) {
+      font-size: 6.9138rem;
+      padding-top: 45.125rem;
+    }
+  }
+
+  p {
+    font-size: 6.75vw;
+    line-height: 1.294191919;
+    width: 20ch;
+
+    @media screen and (min-width: 415px) {
+      font-size: 2.8rem;
+    }
+  }
+
+  .jump-link {
+    .button();
+    bottom: 1rem;
+    display: inline-block;
+    margin-bottom: 0;
+    max-width: 50%;
+    position: relative;
+    text-align: center;
+    width: 20rem;
+    font-size: 5.78313253vw;
+    padding: 3.373493976vw;
+
+    @media screen and (min-width: 415px) {
+      font-size: 2.4rem;
+      padding: 1.4rem;
+    }
+
+    &:hover, &:active {
+      text-decoration: none;
+    }
   }
 }

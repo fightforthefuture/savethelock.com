@@ -14,20 +14,25 @@ body {
   font-weight: 300;
   text-align: center;
 
-  margin: 0 auto;
-  max-width: 100%;
-  padding: 2rem 2rem 22rem;
-  width: 42rem;
+  //margin: 0 auto;
+  //max-width: 100%;
+  //padding: 2rem 2rem 22rem;
+  //width: 42rem;
 
   > * {
-    margin: 2rem auto 6rem;
+    //margin: 2rem auto 6rem;
     //max-width: 40rem;
-    opacity: 0;
     //padding: 0 2rem;
     &:not(header), &:not(#_sc_banner) {
       .fadeIn(1000ms, 900ms);
     }
   }
+}
+
+main {
+  opacity: 0;
+    .fadeIn(1000ms, 900ms);
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,14 +44,6 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 45ch;
 }
 
-h1 {
-  font-size: 3.95rem;
-  font-variant: small-caps;
-  letter-spacing: -3px;
-  margin-bottom: 0;
-  text-transform: uppercase;
-}
-
 h2 {
   font-size: 4.2rem;
   font-weight: 400;
@@ -55,17 +52,6 @@ h2 {
 
 h3 {
   font-size: 2rem;
-}
-
-header {
-  .fadeIn(1000ms, 0);
-  h2 {
-    font-size: 2.8rem;
-
-    @media screen and (min-width: @small-phone) {
-      font-size: 2.55rem;
-    }
-  }
 }
 
 a {
