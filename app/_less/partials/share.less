@@ -39,6 +39,7 @@ ul.share {
     }
 
     @media screen and (min-width: (@max-width-emphasis + 200)) {
+      &:not(.inline) {
         position: fixed;
         left: 0px;
         top: 50%;
@@ -48,5 +49,6 @@ ul.share {
             margin: 15px 15px 15px 0px;
             display: block;
         }
+      }
     }
 }

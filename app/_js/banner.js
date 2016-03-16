@@ -51,7 +51,7 @@ banner.onclick = function(e) {
       document.body.removeChild(banner);
     }, 500);
   } else {
-    window.open('https://savesecurity.org');
+    window.open('https://savesecurity.org?from=banner');
   }
 }
 

@@ -92,10 +92,12 @@ window.components.forms = function (doc, win) {
       modalContent = doc.createElement('div'),
       share = doc.getElementsByClassName('share')[0];
 
-    share.classList.add('visible');
-    modalContent.innerHTML = '<h2>Thanks for signing</h2>\n<p>Now, share this page to spread the word.</p>\n<p><small>…or, <a href="https://donate.fightforthefuture.org/?amount=5&frequency=just-once">chip in $5</a> to help us spread the message.</small></p>';
+    console.log('share:' ,share);
 
-    win.modals.generateModal([modalContent, share]);
+    share.classList.add('visible');
+    modalContent.innerHTML = '<h2>Thanks for signing</h2>\n<p>Now, share this page to spread the word.</p><ul class="share inline visible">\n'+share.innerHTML+'</ul><p><small>…or, <a href="https://donate.fightforthefuture.org/?amount=5&frequency=just-once">chip in $5</a> to help us spread the message.</small></p>';
+
+    win.modals.generateModal([modalContent]);
     removeForm();
   }
 
