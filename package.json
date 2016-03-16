@@ -11,7 +11,7 @@
     }
   ],
   "private": "true",
-  "repository": "fightforthefuture/savethelock.org",
+  "repository": "fightforthefuture/savesecurity.org",
   "scripts": {
     "preinstall": "gem install bundler",
     "postinstall": "bundle",
