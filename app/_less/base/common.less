@@ -70,14 +70,11 @@ header {
 
 a {
   color: @blue-900;
-  font-weight: bold;
-
-  &:link, &:visited {
-    text-decoration: none;
-  }
+  transition: color 150ms;
+  text-decoration: underline;
 
   &:hover, &:active, &:focus {
-    text-decoration: underline;
+    color: @black;
   }
 }
 
