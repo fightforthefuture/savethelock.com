@@ -1,5 +1,5 @@
 (function(){ // :)
-var css = 'body { transition: transform .5s ease-in; } body._sc_banner_active { transform: translateY(100px);} #_sc_banner { position: absolute; left: 0px; top: -100px; width: 100%; height: 75px; background: #171717 url(https://s3.amazonaws.com/s3.fightforthefuture.org/images/justbanner.jpg) center top no-repeat; box-shadow: 0px 1px 20px rgba(0, 0, 0, .3); cursor: pointer; } #_sc_banner button { position: absolute; right: 15px; top: 0px; border: 0px; background: 0px; color: white; font-size: 30px; padding: 0px; width: auto; height: auto; cursor: pointer; opacity: .7; } #_sc_banner button:hover { opacity: 1; }';
+var css = 'body { transition: margin-top .5s ease-in; } body._sc_banner_active { margin-top: 100px;} #_sc_banner { margin: 0px; position: absolute; left: 0px; top: 0px; width: 100%; height: 75px; background: #171717 url(https://s3.amazonaws.com/s3.fightforthefuture.org/images/justbanner.jpg) center top no-repeat; box-shadow: 0px 1px 20px rgba(0, 0, 0, .3); cursor: pointer; } #_sc_banner button { position: absolute; right: 15px; top: 0px; border: 0px; background: 0px; color: white; font-size: 30px; padding: 0px; width: auto; height: auto; cursor: pointer; opacity: .7; } #_sc_banner button:hover { opacity: 1; }';
 
 var setCookie = function(name,val,exdays)
 {
@@ -58,8 +58,12 @@ banner.onclick = function(e) {
     window.open('https://savesecurity.org');
   }
 }
-document.body.appendChild(banner);
 
-setCookie('_SC_BANNER_SHOWN_YAY', 'true', 365);
+var img = new Image()
+img.src = 'https://s3.amazonaws.com/s3.fightforthefuture.org/images/justbanner.jpg';
+img.onload = function() {
+  document.body.appendChild(banner);
+  setCookie('_SC_BANNER_SHOWN_YAY', 'true', 365);
+}
 
 })(); // :)

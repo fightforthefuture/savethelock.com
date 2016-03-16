@@ -42,5 +42,11 @@ var $c  = document.createElement.bind(document);
         }, false);
     }
 
+  if (window.location.href.indexOf('ALWAYS_SHOW_SC_BANNER') !== -1) {
+    var script = document.createElement('script');
+    script.src = '/banner.js';
+    document.head.appendChild(script);
+  }
+
 
 })(document, window);
