@@ -99,6 +99,10 @@ window.components.forms = function (doc, win) {
 
     win.modals.generateModal([modalContent]);
     removeForm();
+
+    document.querySelector('.modal-content button.facebook').addEventListener('click', FreeProgress.share.bind(FreeProgress));
+    document.querySelector('.modal-content button.google').addEventListener('click', googlePlus);
+    document.querySelector('.modal-content button.twitter').addEventListener('click', FreeProgress.tweet.bind(FreeProgress));
   }
 
   function submitForm(event) {
@@ -172,4 +176,5 @@ window.components.forms = function (doc, win) {
   }
 
   init();
+  // setTimeout(function() { handleSigningSuccess() }, 500); // JL DEBUG ~
 };

@@ -1,5 +1,10 @@
 var $c  = document.createElement.bind(document);
 
+function googlePlus() {
+  var url = window.location.protocol + '//' + window.location.host;
+  window.open('https://plus.google.com/share?url='+url, 'share_gl', 'width=500, height=300, toolbar=no, status=no, menubar=no');
+}
+
 (function (doc, win) {
   "use strict";
 
@@ -37,8 +42,7 @@ var $c  = document.createElement.bind(document);
     for (var i = 0; i < gl.length; i++) {
         gl[i].addEventListener('click', function(e) {
             e.preventDefault();
-            var url = window.location.protocol + '//' + window.location.host;
-            window.open('https://plus.google.com/share?url='+url, 'share_gl', 'width=500, height=300, toolbar=no, status=no, menubar=no');
+            googlePlus();
         }, false);
     }
 
