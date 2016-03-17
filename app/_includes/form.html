@@ -1,4 +1,9 @@
 <form action="https://actionnetwork.org/forms/save-the-lock/answers" method="post" title="Save the lock" data-identifier="86ef7be3-da62-480c-ab42-4643c0f93be8" data-host="{{ site.petitions_api }}">
+  <label for="select-country" id="hidden-country">
+    Not in the US?
+    <input type="hidden" value="US" name="answer[country]" />
+  </label>
+
   <label class="visually-hidden" for="form-email">Your email address:</label>
   <input type="email" id="form-email" name="answer[email]" placeholder="Email address" required/>
 
@@ -7,11 +12,6 @@
 
   <label class="visually-hidden" for="form-zip_code">Your ZIP:</label>
   <input type="text" id="form-zip_code" name="answer[zip_code]" placeholder="ZIP" required/>
-
-  <label for="select-country" id="hidden-country">
-    Not in the US?
-    <input type="hidden" value="US" name="answer[country]" />
-  </label>
 
   <select id="select-country">
     {% for country in site.data.countries %}
