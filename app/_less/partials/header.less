@@ -1,62 +1,86 @@
 header {
   height: 100vh;
-  margin: 0 auto 5rem auto;
-  padding-top: 2rem;
-  position: relative;
-  opacity: 0;
-  text-align: center;
+  padding: 2rem 2rem;
   width: 100vw;
   .fadeIn(1000ms);
 
+  @media (orientation: landscape) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    @media (min-height: @large-phone) {
+      display: block;
+    }
+  }
+
+
   h1 {
-    font-size: 16.7vw;
-    font-variant: small-caps;
-    letter-spacing: -2px;
-    margin-bottom: 0;
-    text-transform: lowercase;
     background-image: url('/images/lock-bg.png');
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: contain;
-    padding-top: 109%;
-    max-width: 85%;
-    width: 35.1rem;
+    font-variant: small-caps;
+    letter-spacing: -2px;
+    line-height: 0.5;
+    margin-top: 0;
+    margin-bottom: 4rem;
+    text-transform: lowercase;
 
-    @media screen and (min-width: 415px) {
-      font-size: 6.9138rem;
-      padding-top: 45.125rem;
+    @media (orientation: portrait) {
+      background-size: auto 45vh;
+      font-size: 7vh;
+      padding-top: 45vh;
+    }
+
+    @media (orientation: landscape) {
+      background-size: auto 83vh;
+      font-size: 13vh;
+      margin: 0;
+      padding-top: 83vh;
+      width: 44%;
+
+      @media (min-height: @large-phone) {
+        background-size: auto 45vh;
+        font-size: 7vh;
+        margin: 0 auto 4rem;
+        padding-top: 45vh;
+        width: auto;
+      }
     }
   }
 
   p {
-    font-size: 6.75vw;
-    line-height: 1.294191919;
-    width: 20ch;
+    margin-bottom: 8vh;
+    max-width: 20ch;
+    text-align: center;
 
-    @media screen and (min-width: 415px) {
-      font-size: 2.8rem;
+    @media (orientation: landscape) {
+      font-size: 8vh;
+      margin: 33vh 0 10vh;
+    }
+
+    @media screen and (min-width: @large-phone) {
+      font-size: 3rem;
+      margin: 2rem auto 4rem;
     }
   }
+}
 
-  .jump-link {
-    .button();
-    bottom: 1rem;
-    display: inline-block;
-    margin-bottom: 0;
-    max-width: 50%;
-    position: relative;
-    text-align: center;
-    width: 20rem;
-    font-size: 5.78313253vw;
-    padding: 3.373493976vw;
+.jump-link {
+  .button();
+  display: inline;
+  margin: 0 auto;
+  padding: 0.3296em 1.7891em 0.4237em;
+  text-decoration: none;
 
-    @media screen and (min-width: 415px) {
-      font-size: 2.4rem;
-      padding: 1.4rem;
-    }
+  @media (orientation: portrait) {
+    font-size: 4vh;
+  }
 
-    &:hover, &:active {
-      text-decoration: none;
-    }
+  @media (orientation: landscape) {
+    width: auto;
+  }
+
+  &:hover, &:active, &:focus {
+    color: @white;
   }
 }

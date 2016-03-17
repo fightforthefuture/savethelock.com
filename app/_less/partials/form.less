@@ -13,7 +13,7 @@
 .button() {
   .text-form-elements();
   background-color: @blue-400;
-  box-shadow: 0 0.6rem 1.8rem fade(@blue-400, 42%);
+  box-shadow: 0 0.25em 0.75em fade(@blue-400, 42%);
   border: none;
   color: @white;
   cursor: pointer;
@@ -21,13 +21,15 @@
   font-size: 2.4rem;
   font-weight: 900;
   letter-spacing: 1px;
-  padding: 1.4rem 0;
+  padding: 0.583333333em 0;
+  position: relative;
   text-transform: uppercase;
   transition: background-color 300ms, bottom 100ms;
 
   &:focus {
     box-shadow: 0 0 3px 3px @blue-900;
     outline: 0;
+    top: 1px;
   }
 
   &:hover {
@@ -35,7 +37,7 @@
   }
 
   &:active {
-    padding: 1.5rem 0 1.3rem;
+    top: 2px;
   }
 }
 
