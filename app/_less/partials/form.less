@@ -13,6 +13,7 @@
 .button() {
   .text-form-elements();
   background-color: @blue-400;
+  box-shadow: 0 0.6rem 1.8rem fade(@blue-400, 42%);
   border: none;
   color: @white;
   cursor: pointer;
@@ -45,14 +46,17 @@
 
 form {
   align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 4px 0 fade(@black, 16%);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  // overflow: hidden;
+  max-width: 74rem;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 2rem 2rem 0;
   position: relative;
   transition: height 400ms;
-  //margin: 1rem auto 2rem;
-  //width: 29.5rem;
 
   &.removed {
     height: 0;
@@ -133,7 +137,7 @@ select {
 }
 
 .submitted {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: fade(@white, 85%);
   bottom: 0;
   content: ' ';
   display: block;
