@@ -150,6 +150,7 @@ module.exports = function (grunt) {
         files: [
           {
             src: [
+              'node_modules/smoothscroll/smoothscroll.min.js',
               '<%= site.app %>/_js/controllers/**/*.js',
               '<%= site.app %>/_js/models/**/*.js',
               '<%= site.app %>/_js/views/**/*.js',
@@ -159,10 +160,10 @@ module.exports = function (grunt) {
           },
           {
             src: [
-              '<%= site.app %>/_js/banner.js',
+              '<%= site.app %>/_js/banner.js'
             ],
             dest: '<%= site.dist %>/banner.js'
-          },
+          }
         ]
       }
     },

@@ -34,9 +34,15 @@ function googlePlus() {
       window.removeEventListener('scroll', listenerFn);
       document.querySelector('ul.share').classList.add('visible');
     }
-  }
+  };
+
 
   window.addEventListener('scroll', listenerFn);
+  doc.querySelector('[href="strong-security-saves-lives"]').addEventListener('click', function (e){
+    e.preventDefault();
+
+    win.smoothScroll(doc.getElementById('strong-security-saves-lives'));
+  });
 
   var gl = document.querySelectorAll('button.google');
     for (var i = 0; i < gl.length; i++) {

@@ -19,7 +19,9 @@
     "build": "grunt build",
     "deploy": "./deploy-ghpages.sh"
   },
-  "dependencies": {},
+  "dependencies": {
+    "smoothscroll": "^0.2.2"
+  },
   "devDependencies": {
     "autoprefixer": "^6.3.3",
     "cssnano": "^3.5.2",
