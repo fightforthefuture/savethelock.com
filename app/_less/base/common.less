@@ -13,26 +13,17 @@ body {
   font-size: 1.6rem;
   font-weight: 300;
   text-align: center;
-
-  //margin: 0 auto;
-  //max-width: 100%;
-  //padding: 2rem 2rem 22rem;
-  //width: 42rem;
-
-  > * {
-    //margin: 2rem auto 6rem;
-    //max-width: 40rem;
-    //padding: 0 2rem;
-    &:not(header), &:not(#_sc_banner) {
-      .fadeIn(1000ms, 900ms);
-    }
-  }
 }
 
-main {
+article {
+  margin: 3rem auto 5rem;
   opacity: 0;
-    .fadeIn(1000ms, 900ms);
+  padding: 0 2rem;
+  .fadeIn(1000ms, 800ms);
 
+  @media screen and (min-width: @small-phone) {
+    padding: 0 3rem;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,6 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
   font-size: 4.2rem;
   font-weight: 400;
+  line-height: 1;
   margin-bottom: 0.6em;
 }
 
@@ -76,6 +68,12 @@ p {
   font-size: 1.9rem;
   line-height: 1.6;
   margin: 1rem auto 2rem;
+  max-width: 70ch;
+
+  @media screen and (min-width: @large-tablet) {
+    text-align: justify;
+    text-align-last: center;
+  }
 }
 
 ul {

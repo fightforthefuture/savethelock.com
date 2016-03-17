@@ -1,12 +1,16 @@
 ---
 ---
 
-<p>
-The FBI wants to force Apple to weaken the security measures that keep all of us safe. This is misguided, and dangerous. On <time datetime="2016-03-22">March 22</time>, when Apple goes to court, we&rsquo;ll display thousands of statements from Internet users outside the courthouse.</p>
-<p><strong>Add your voice. Sign below to say, "Save security! I oppose the FBI order."</strong>
-</p>
-
-{% include form.html %}
+<article class="petition">
+  <h2 id="strong-security-saves-lives">Strong Security Saves Lives</h2>
+  <p>
+    The FBI wants to force Apple to weaken the security measures that keep all of us safe. This is misguided, and dangerous. On <time datetime="2016-03-22"><strong>March 22</strong></time>, when Apple goes to court, we&rsquo;ll display thousands of statements from Internet users outside the courthouse.
+  </p>
+  <p>
+    <strong>Add your voice. Sign below to say, "Save security! I oppose the FBI order."</strong>
+  </p>
+  {% include form.html %}
+</article>
 
 {% comment %}
 <article class="coalition">
@@ -21,44 +25,47 @@ The FBI wants to force Apple to weaken the security measures that keep all of us
 {% endcomment %}
 
 <article class="participate">
-  <h2 id="join-our-movement">What's happening?</h2>
-  <p>The FBI is trying <a href="http://www.wired.com/2016/02/apple-fbi-privacy-security/">force Apple</a> to write software that would act as a backdoor for millions of phones, and set a precedent that would make all of us <a href="https://www.washingtonpost.com/posteverything/wp/2016/02/18/why-you-should-side-with-apple-not-the-fbi-in-the-san-bernardino-iphone-case/">less safe.</a> Apple goes back to court on March 22nd. We need to educate as many people as possible that this is not just about one phone, it's about all of our safety. We’ll be gathering outside the courthouse on the day of Apple's hearing, displaying and reading comments from Internet users everywhere. Want to help? Submit a comment, and change your profile image or add our banner code to your site. If you’re in the Los Angeles area, <a href="mailto:team@fightforthefuture.org">be in touch</a> and meet us at the <a href="https://www.google.com/maps/place/US+District+Court/@33.9772736,-117.3766075,17z/">US District Court</a>.</p>
+  <h2 id="whats-happening">What&rsquo;s happening?</h2>
+  <p>The FBI is trying <a href="http://www.wired.com/2016/02/apple-fbi-privacy-security/">force Apple</a> to write software that would act as a backdoor for millions of phones, and set a precedent that would make all of us <a href="https://www.washingtonpost.com/posteverything/wp/2016/02/18/why-you-should-side-with-apple-not-the-fbi-in-the-san-bernardino-iphone-case/">less safe.</a> Apple goes back to court on March 22nd. We need to educate as many people as possible that this is not just about one phone, it's about all of our safety. We&rsquo;ll be gathering outside the courthouse on the day of Apple's hearing, displaying and reading comments from Internet users everywhere. Want to help? Submit a comment, and change your profile image or add our banner code to your site. If you&rsquo;re in the Los Angeles area, <a href="mailto:team@fightforthefuture.org">be in touch</a> and meet us at the <a href="https://www.google.com/maps/place/US+District+Court/@33.9772736,-117.3766075,17z/">US District Court</a>.</p>
 
-<article class="assets">
-  <figure id="cover-photo">
-    <figcaption>Cover photo</figcaption>
-    <a href="/images/downloads/cover-photo.jpg" download="cover-photo.jpg">Get the image</a>
-    <a href="/images/downloads/cover-photo.jpg" download="cover-photo.jpg">
-      <img src="/images/downloads/cover-photo-thumbnail.jpg" alt="Cover photo image" width="420" height="158">
-    </a>
-  </figure>
+  <section class="assets">
+    <figure id="cover-photo" class="asset">
+      <figcaption>Cover photo</figcaption>
+      <a href="/images/downloads/cover-photo.jpg" download="cover-photo.jpg">Get the image</a>
+      <a href="/images/downloads/cover-photo.jpg" download="cover-photo.jpg">
+        <img src="/images/downloads/cover-photo-thumbnail.jpg" alt="Cover photo image" width="420" height="158">
+      </a>
+    </figure>
 
-  <figure id="profile-picture">
-    <figcaption>Profile picture</figcaption>
-    <a href="/images/downloads/profile-picture.jpg" download="profile-picture.jpg">Get the picture</a>
-    <a href="/images/downloads/profile-picture.jpg" download="profile-picture.jpg">
-      <img src="/images/downloads/profile-picture-thumbnail.jpg" alt="Profile picture image" width="420" height="420">
-    </a>
-  </figure>
+    <figure id="profile-picture" class="asset">
+      <figcaption>Profile picture</figcaption>
+      <a href="/images/downloads/profile-picture.jpg" download="profile-picture.jpg">Get the picture</a>
+      <a href="/images/downloads/profile-picture.jpg" download="profile-picture.jpg">
+        <img src="/images/downloads/profile-picture-thumbnail.jpg" alt="Profile picture image" width="420" height="420">
+      </a>
+    </figure>
 
-  <figure id="website-banner">
-    <figcaption>Website banner</figcaption>
-    <a href="/?ALWAYS_SHOW_SC_BANNER=true" class="demo">See a demo</a>
-    <p>Add this code to your page to show a banner on top:</p>
-    <blockquote>&lt;script src="//savesecurity.org/banner.js" async>&lt;/script></blockquote>
-    <a href="/images/downloads/website-banner.jpg">
+    <figure id="website-banner" class="asset">
+      <figcaption>Website banner</figcaption>
+      <a href="/?ALWAYS_SHOW_SC_BANNER=true" class="demo">See a demo</a>
+      <p>Add this code to your page to show a banner on top:</p>
+      {% highlight html %}<script src="//savesecurity.org/banner.js" async></script>{% endhighlight html %}
       <img src="/images/downloads/website-banner-thumbnail.jpg" alt="Website banner image" width="433" height="306">
-    </a>
-  </figure>
+    </figure>
+  </section>
 </article>
 
 <article>
   <h2 id="why-this-matters">What's at stake</h2>
-  <p>In its attacks on Apple, the FBI is seeking a legal precedent that would let them force <em>any</em> company to weaken the security of its products. Engineers use consumer products like the iPhone to maintain the most sensitive systems on the planet. Hospitals. Air traffic control. Nuclear power. What the FBI is asking for puts lives at risk, by undermining security everywhere.</p>
+  <p>
+    In its attacks on Apple, the FBI is seeking a legal precedent that would let them force <em>any</em> company to weaken the security of its products. Engineers use consumer products like the iPhone to maintain the most sensitive systems on the planet. Hospitals. Air traffic control. Nuclear power. What the FBI is asking for puts lives at risk, by undermining security everywhere.
+  </p>
 
-  <div class="video">
-    <iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/zsjZ2r9Ygzw?rel=0" frameborder="0" allowfullscreen></iframe>
-  </div>
+  <figure class="oliver">
+    <div class="video">
+      <iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/zsjZ2r9Ygzw?rel=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </figure>
 </article>
 
 {% comment %}

@@ -21,24 +21,8 @@
 }
 
 .participate {
-  figure {
-    margin: 3rem auto;
-
-    @media screen and (min-width: @small-phone) {
-      display: flex;
-      flex-wrap: wrap;
-      font-size: 2rem;
-      justify-content: space-between;
-      text-align: right;
-    }
-  }
-
-  figcaption {
-    font-weight: 600;
-
-    @media screen and (min-width: @small-phone) {
-      order:0;
-    }
+  h2, p {
+    width: 100%;
   }
 
   a[download], a.demo {
@@ -51,23 +35,101 @@
 
   p {
     text-align: center;
-    font-size: 15px;
-    margin-bottom: .5rem;
-    margin-top: 0px;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+
+    @media screen and (min-width: @small-tablet) {
+      text-align: justify;
+    }
   }
 
-  blockquote {
-    font-size: 14px;
-    text-align: center;
-    width: 100%;
-    background: #eee;
+  .highlight {
+    border-radius: 2px;
     margin-bottom: 2.5rem;
-    display: block;
+    text-align: center;
+
+    pre {
+      overflow: scroll;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
   }
 
   img {
     width: 100%;
   }
+}
+
+.assets {
+  @media screen and (min-width: @small-tablet) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 65rem;
+    justify-content: flex-start;
+    margin: 0 auto;
+    width: 74rem;
+  }
+
+  @media screen and (min-width: @large-tablet) {
+    width: 88rem;
+    height: 71rem;
+  }
+}
+
+.asset {
+  margin: 3rem auto;
+  max-width: 100%;
+  width: 42rem;
+
+  @media screen and (min-width: @small-phone) {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2rem;
+    justify-content: space-between;
+    text-align: right;
+    width: 35rem;
+  }
+
+  @media screen and (min-width: @small-tablet) {
+    margin: 1rem;
+  }
+
+  @media screen and (min-width: @large-tablet) {
+    width: 42rem;
+  }
+}
+
+figcaption {
+  font-weight: 600;
+
+  @media screen and (min-width: @small-phone) {
+    order: 0;
+  }
+}
+
+#profile-picture {
+  @media screen and (min-width: @small-tablet) {
+    order: 0;
+  }
+}
+
+#cover-photo {
+  @media screen and (min-width: @small-tablet) {
+    order: 1;
+  }
+}
+
+#website-banner {
+  @media screen and (min-width: @small-tablet) {
+    order: 2;
+  }
+}
+
+.oliver {
+  margin: 0 auto;
+  max-width: 44rem;
 }
 
 .participants {
