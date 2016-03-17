@@ -38,7 +38,7 @@ function googlePlus() {
 
 
   window.addEventListener('scroll', listenerFn);
-  doc.querySelector('[href="strong-security-saves-lives"]').addEventListener('click', function (e){
+  doc.querySelector('[href="#strong-security-saves-lives"]').addEventListener('click', function (e){
     e.preventDefault();
 
     win.smoothScroll(doc.getElementById('strong-security-saves-lives'));
