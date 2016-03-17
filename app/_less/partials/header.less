@@ -8,7 +8,7 @@ header {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    @media (min-height: @large-phone) {
+    @media (min-width: @small-tablet) {
       display: block;
     }
   }
@@ -38,7 +38,7 @@ header {
       padding-top: 83vh;
       width: 44%;
 
-      @media (min-height: @large-phone) {
+      @media (min-width: @small-tablet) {
         background-size: auto 45vh;
         font-size: 7vh;
         margin: 0 auto 4rem;
@@ -60,7 +60,12 @@ header {
 
     @media screen and (min-width: @large-phone) {
       font-size: 3rem;
-      margin: 2rem auto 4rem;
+      margin: 29vh auto 7vh;
+    }
+
+    @media screen and (min-width: @small-tablet) {
+      font-size: 3.5vh;
+      margin: 9vh auto;
     }
   }
 }
@@ -78,6 +83,10 @@ header {
 
   @media (orientation: landscape) {
     width: auto;
+  }
+
+  @media screen and (min-width: @small-tablet) {
+    font-size: 4.5vh;
   }
 
   &:hover, &:active, &:focus {
