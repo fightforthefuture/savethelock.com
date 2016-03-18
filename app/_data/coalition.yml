@@ -18,3 +18,5 @@
   image: /images/logo.png
 - name: Freedom of the Press Foundation
   image: /images/coalition/freedomofthepress.png
+  - name: Wikimedia Foundation
+  image: /images/coalition/Wikimedia_Foundation.png
