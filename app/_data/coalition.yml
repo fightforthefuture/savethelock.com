@@ -6,6 +6,8 @@
   image: /images/coalition/facebook.png
 - name: twitter
   image: /images/coalition/twitter.png
+- name: Wikimedia Foundation
+  image: /images/coalition/Wikimedia_Foundation.png
 - name: WwhatsApp
   image: /images/coalition/whatsapp.png
 - name: Private Internet Access
@@ -18,5 +20,17 @@
   image: /images/logo.png
 - name: Freedom of the Press Foundation
   image: /images/coalition/freedomofthepress.png
-- name: Wikimedia Foundation
-  image: /images/coalition/Wikimedia_Foundation.png
+- name: American Civil Liberties Union
+  image: /images/coalition/American_Civil_Liberties_Union_logo.png
+- name: Crowd Supply
+  image: /images/coalition/Crowd_Supply_Logo.png
+- name: Demand Progress
+  image: /images/coalition/Demand-Progress-Logo.png
+- name: IPVanish
+  image: /images/coalition/ipvanish-logo.png
+- name: Reddit
+  image: /images/coalition/reddit-logo.png
+- name: Golden Frog
+  image: /images/coalition/golden_frog_logo_rgb.png
+- name: Thunderclap
+  image: /images/coalition/thunderclap-logo.png
