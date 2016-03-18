@@ -16,6 +16,11 @@
 
 .coalition {
   background-color: @grey-100;
+  padding: 4rem 2rem;
+
+  @media screen and (min-width: @large-phone) {
+    padding: 7rem 4rem;
+  }
 }
 
 .coalition-logos {
@@ -24,7 +29,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0 auto;
-  max-width: 70rem;
+  max-width: 100rem;
 
   img {
     box-sizing: content-box;
@@ -33,6 +38,10 @@
     max-width: 30rem;
     padding: 2rem;
     width: auto;
+
+    @media screen and (min-width: @large-tablet) {
+      padding: 3.5rem;
+    }
   }
 }
 
