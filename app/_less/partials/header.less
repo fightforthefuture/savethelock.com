@@ -1,95 +1,75 @@
 header {
+  background-image: url(/images/lock-bg.png);
+  background-repeat: no-repeat;
+  background-size: auto 50vh;
+  background-position: center 5vh;
+  padding: 50vh 2rem 2rem;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
-  padding: 2rem 2rem;
+  justify-content: flex-start;
   width: 100vw;
   .fadeIn(1000ms);
 
   @media (orientation: landscape) {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    @media (min-width: @small-tablet) {
-      display: block;
-    }
+    background-position: 2rem center;
+    background-size: auto 80%;
+    justify-content: center;
+    padding: 2rem 2rem 2rem 40vw;
   }
 
+  @media (min-width: @small-tablet) {
+    background-size: 33.1rem 45rem;
+    padding: 46rem 2rem 2rem;
+    background-position: center 3.8rem;
+    justify-content: flex-start;
+  }
 
   h1 {
-    background-image: url('/images/lock-bg.png');
-    background-position: center top;
-    background-repeat: no-repeat;
+    font-size: 7.25vh;
     font-variant: small-caps;
     letter-spacing: -2px;
-    line-height: 0.5;
-    margin-top: 0;
-    margin-bottom: 4rem;
+    margin: 2vh auto 3rem;
     text-transform: lowercase;
 
-    @media (orientation: portrait) {
-      background-size: auto 45vh;
-      font-size: 7vh;
-      padding-top: 45vh;
+    @media (orientation: landscape) {
+      font-size: 5.4rem;
+      margin: 6vw auto 1rem;
     }
 
-    @media (orientation: landscape) {
-      background-size: auto 83vh;
-      font-size: 11.25vh;
-      margin: 0;
-      padding-top: 83vh;
-      width: 44%;
-
-      @media (min-width: @small-tablet) {
-        background-size: auto 45vh;
-        font-size: 7vh;
-        margin: 0 auto 4rem;
-        padding-top: 45vh;
-        width: auto;
-      }
+    @media screen and (min-width: @small-tablet) {
+      font-size: 6.4rem;
+      margin: 0 auto 3rem;
     }
   }
 
   p {
-    margin-bottom: 8vh;
+    font-size: 2.7rem;
+    line-height: 1;
+    margin-bottom: 10vh;
     max-width: 20ch;
     text-align: center;
 
     @media (orientation: landscape) {
-      font-size: 8vh;
-      margin: 33vh 0 10vh;
-    }
-
-    @media screen and (min-width: @large-phone) {
-      font-size: 3rem;
-      margin: 29vh auto 7vh;
+      margin-bottom: 2rem;
     }
 
     @media screen and (min-width: @small-tablet) {
-      font-size: 3.5vh;
-      margin: 9vh auto;
+      margin-bottom: 15vh;
     }
   }
 }
 
-.jump-link {
-  .button();
-  display: inline;
-  margin: 0 auto;
-  padding: 0.3296em 1.7891em 0.4237em;
-  text-decoration: none;
+.arrow-down {
+  width: 4rem;
 
-  @media (orientation: portrait) {
-    font-size: 4vh;
-  }
-
-  @media (orientation: landscape) {
-    width: auto;
-  }
-
-  @media screen and (min-width: @small-tablet) {
-    font-size: 4.5vh;
+  .st0 {
+    transition: fill 250ms;
   }
 
   &:hover, &:active, &:focus {
-    color: @white;
+    .st0 {
+      fill: darken(@blue-400, 10%);
+    }
   }
 }
