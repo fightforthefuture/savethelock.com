@@ -69,14 +69,11 @@ form {
 [type="email"],
 textarea {
   .text-form-elements();
-}
-
-[type="text"]:focus,
-[type="email"]:focus,
-textarea:focus {
-  outline: none;
-  border-color: #000;
-  box-shadow: 0 0 0 3px rgb(21, 97, 248);
+  &:focus {
+    outline: none;
+    border-color: #000;
+    box-shadow: 0 0 0 3px @blue-400;
+  }
 }
 
 [type="submit"] {
