@@ -1,5 +1,6 @@
 header {
-  background-image: url(/images/lock-bg.png);
+  align-items: center;
+  background-image: url('/images/lock-bg.png');
   background-repeat: no-repeat;
   background-size: auto 50vh;
   background-position: center 5vh;
@@ -11,18 +12,11 @@ header {
   width: 100vw;
   .fadeIn(1000ms);
 
-  @media (orientation: landscape) {
-    background-position: 2rem center;
-    background-size: auto 80%;
+  @media (orientation: landscape) and (max-width: @large-phone) {
+    background-position: 9vw center;
+    background-size: auto 68%;
     justify-content: center;
     padding: 2rem 2rem 2rem 40vw;
-  }
-
-  @media (min-width: @small-tablet) {
-    background-size: 33.1rem 45rem;
-    padding: 46rem 2rem 2rem;
-    background-position: center 3.8rem;
-    justify-content: flex-start;
   }
 
   h1 {
@@ -32,14 +26,9 @@ header {
     margin: 2vh auto 3rem;
     text-transform: lowercase;
 
-    @media (orientation: landscape) {
+    @media (orientation: landscape) and (max-width: @large-phone) {
       font-size: 5.4rem;
       margin: 6vw auto 1rem;
-    }
-
-    @media screen and (min-width: @small-tablet) {
-      font-size: 6.4rem;
-      margin: 0 auto 3rem;
     }
   }
 
@@ -50,12 +39,8 @@ header {
     max-width: 20ch;
     text-align: center;
 
-    @media (orientation: landscape) {
+    @media (orientation: landscape) and (max-width: @large-phone) {
       margin-bottom: 2rem;
-    }
-
-    @media screen and (min-width: @small-tablet) {
-      margin-bottom: 15vh;
     }
   }
 }
