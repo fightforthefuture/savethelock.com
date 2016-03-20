@@ -22,7 +22,13 @@
   <p>These companies and individuals are taking a stand with us to oppose backdoors into the products and devices we depend on.</p>
   <section class="coalition-logos">
     {% for member in site.data.coalition %}
-    <img src="{{ member.image }}" alt="{{ member.name }}">
+    {% if member.url %}
+    <a href="{{ member.url }}">
+      <img src="{{ member.image }}" alt="{{ member.name }}" title="{{ member.name }}">
+    </a>
+    {% else %}
+    <img src="{{ member.image }}" alt="{{ member.name }}" title="{{ member.name }}">
+    {% endif %}
     {% endfor %}
   </section>
 </article>
