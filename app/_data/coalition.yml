@@ -1,21 +1,12 @@
-- name: Apple
-  image: /images/coalition/apple.png
 - name: Google
   image: /images/coalition/google.png
-- name: Facebook
-  image: /images/coalition/facebook.png
-- name: twitter
-  image: /images/coalition/twitter.png
+  url: http://test.com
 - name: Wikimedia Foundation
   image: /images/coalition/Wikimedia_Foundation.png
-- name: WwhatsApp
-  image: /images/coalition/whatsapp.png
 - name: Private Internet Access
   image: /images/coalition/pia.png
 - name: ExpressVpn
   image: /images/coalition/expressvpn.png
-- name: Electronic Frontier Foundation
-  image: /images/coalition/eff.png
 - name: Fight for the Future
   image: /images/logo.png
 - name: Freedom of the Press Foundation
