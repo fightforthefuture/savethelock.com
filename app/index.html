@@ -31,6 +31,13 @@
     {% endif %}
     {% endfor %}
   </section>
+
+  <h2>Individual Supporters</h2>
+
+  {% capture participants %}
+  {% include individual-participants.md %}
+  {% endcapture %}
+  {{ participants | markdownify }}
 </article>
 
 <article class="participate">
@@ -92,10 +99,5 @@
     </div>
   </figure>
 </article>
-
-{% comment %}
-Uncomment this section when we are ready to show off participants.
-{% include participants.html %}
-{% endcomment %}
 
 {% include share.html %}
