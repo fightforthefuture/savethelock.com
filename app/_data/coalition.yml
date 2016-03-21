@@ -40,6 +40,15 @@
 - name: IPVanish
   image: /images/coalition/ipvanish-text-logo.png
   url: https://www.facebook.com/ipvanish/posts/758889737545669
+- name: Campaign for Liberty
+  image: /images/coalition/CampaignForLiberty.png
+  url: http://campaignforliberty.org/
+- name: Media Alliance
+  image: /images/coalition/MediaAlliance.png
+  url: https://twitter.com/twrling/status/710885819590938624
+- name: Free Press
+  image: /images/coalition/FreePress.png
+  url: http://freepress.net/
 - name: Access Now
   image: /images/coalition/accessnow.png
   url: https://www.accessnow.org/
