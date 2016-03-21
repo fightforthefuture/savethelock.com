@@ -34,6 +34,18 @@
 - name: IPVanish
   image: /images/coalition/ipvanish-text-logo.png
   url: https://www.facebook.com/ipvanish/posts/758889737545669
+- name: OTI
+  image: /images/coalition/OTI.png
+  url: https://www.newamerica.org/oti/
+- name: Open Media
+  image: /images/coalition/Open Media.gif
+  url: https://openmedia.org/
+- name: Strong VPN
+  image: /images/coalition/StrongVPN.png
+  url: http://strongvpn.com/ 
+- name: Center for Media Justice
+  image: /images/coalition/CenterForMediajustice.png
+  url: http://centerformediajustice.org/
 - name: Golden Frog
   image: /images/coalition/gf_logo.png
   url: https://twitter.com/Golden_Frog/status/710580373395259393
