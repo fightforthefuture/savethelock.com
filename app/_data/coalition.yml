@@ -7,6 +7,9 @@
 - name: Private Internet Access
   image: /images/coalition/pia.png
   url: https://www.privateinternetaccess.com/
+- name: Electronic Frontier Foundation
+  image: /images/coalition/eff.png
+  url: https://eff.org/
 - name: ExpressVpn
   image: /images/coalition/expressvpn.png
   url: https://www.expressvpn.com/
