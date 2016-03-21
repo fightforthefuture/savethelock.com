@@ -205,8 +205,6 @@ body.contrast button#eyeball, body.contrast button#next, body.contrast button#pr
     else
       document.body.className = '';
   });
-  document.getElementById('prev').addEventListener('click', prev);
-  document.getElementById('next').addEventListener('click', next);
   setTimeout(function() {
     document.getElementById('loading').style.width = '100%';
   }, 100);
@@ -240,6 +238,8 @@ body.contrast button#eyeball, body.contrast button#next, body.contrast button#pr
       clearTimeout(window._timer);
     fadeToNext();
   }
+  document.getElementById('prev').addEventListener('click', prev);
+  document.getElementById('next').addEventListener('click', next);
   var fadeToNext = function(index) {
     console.log('fadeToNext called: ', index);
     console.log('window._lastIndex is: ', window._lastIndex);
