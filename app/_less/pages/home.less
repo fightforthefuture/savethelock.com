@@ -16,23 +16,28 @@
 
 .coalition {
   background-color: @grey-100;
+  padding: 4rem 2rem;
+
+  @media screen and (min-width: @large-phone) {
+    padding: 7rem 4rem;
+  }
 }
 
 .coalition-logos {
-  align-items: baseline;
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0 auto;
-  max-width: 70rem;
+  max-width: 90%;
 
   img {
-    box-sizing: content-box;
-    height: auto;
-    max-height: 12rem;
-    max-width: 30rem;
     padding: 2rem;
-    width: auto;
+
+    @media screen and (min-width: @large-tablet) {
+      margin: 3.5rem;
+      padding: 0;
+    }
   }
 }
 
