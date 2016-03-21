@@ -40,3 +40,6 @@
 - name: Thunderclap
   image: /images/coalition/thunderclap-logo.png
   url: https://twitter.com/ThunderclapIt/status/710839966788677632
+- name: Open Media
+  image: /images/coalition/Open%20Media.gif
+  url: https://openmedia.org/
