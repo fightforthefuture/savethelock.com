@@ -28,6 +28,9 @@
 - name: Demand Progress
   image: /images/coalition/dp-transparent.png
   url: https://twitter.com/demandprogress/status/710933967143247872
+- name: Duck Duck Go
+  image: /images/coalition/DuckDuckGo.png
+  url: https://duckduckgo.com/
 - name: IPVanish
   image: /images/coalition/ipvanish-text-logo.png
   url: https://www.facebook.com/ipvanish/posts/758889737545669
