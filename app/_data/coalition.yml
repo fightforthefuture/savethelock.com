@@ -10,9 +10,6 @@
 - name: ExpressVpn
   image: /images/coalition/expressvpn.png
   url: https://www.expressvpn.com/
-- name: Google
-  image: /images/coalition/google.png
-  url: http://www.google.com
 - name: Fight for the Future
   image: /images/logo.png
   url: https://twitter.com/fightfortheftr/status/710074186866298884
