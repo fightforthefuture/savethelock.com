@@ -70,3 +70,9 @@
 - name: Thunderclap
   image: /images/coalition/thunderclap-logo.png
   url: https://twitter.com/ThunderclapIt/status/710839966788677632
+- name: ALA
+  image: /images/coalition/ALA.png
+  url: http://www.ala.org/
+- name: The X-Lab
+  image: /images/coalition/Xlab.png
+  url: http://thexlab.org
