@@ -32,12 +32,16 @@
     {% endfor %}
   </section>
 
+  {% comment %}
+  <!-- uncomment here 👆 and the corresponding "endcomment" when you're ready to
+   add individual supporters back in -->
   <h2>Individual Supporters</h2>
 
   {% capture participants %}
   {% include individual-participants.md %}
   {% endcapture %}
   {{ participants | markdownify }}
+  {% endcomment %}
 </article>
 
 <article class="participate">
