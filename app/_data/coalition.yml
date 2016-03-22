@@ -13,6 +13,9 @@
 - name: ExpressVpn
   image: /images/coalition/expressvpn.png
   url: https://www.expressvpn.com/
+- name: Google
+  image: /images/coalition/google.png
+  url: http://www.google.com
 - name: Fight for the Future
   image: /images/logo.png
   url: https://twitter.com/fightfortheftr/status/710074186866298884
@@ -34,6 +37,30 @@
 - name: IPVanish
   image: /images/coalition/ipvanish-text-logo.png
   url: https://www.facebook.com/ipvanish/posts/758889737545669
+- name: Campaign for Liberty
+  image: /images/coalition/CampaignForLiberty.png
+  url: http://campaignforliberty.org/
+- name: Media Alliance
+  image: /images/coalition/MediaAlliance.png
+  url: https://twitter.com/twrling/status/710885819590938624
+- name: Free Press
+  image: /images/coalition/FreePress.png
+  url: http://freepress.net/
+- name: Access Now
+  image: /images/coalition/accessnow.png
+  url: https://www.accessnow.org/
+- name: OTI
+  image: /images/coalition/OTI.png
+  url: https://www.newamerica.org/oti/
+- name: Open Media
+  image: /images/coalition/open-media.png
+  url: https://openmedia.org/
+- name: Strong VPN
+  image: /images/coalition/StrongVPN.png
+  url: http://strongvpn.com/
+- name: Center for Media Justice
+  image: /images/coalition/CenterForMediajustice.png
+  url: http://centerformediajustice.org/
 - name: Golden Frog
   image: /images/coalition/gf_logo.png
   url: https://twitter.com/Golden_Frog/status/710580373395259393
@@ -43,6 +70,9 @@
 - name: Thunderclap
   image: /images/coalition/thunderclap-logo.png
   url: https://twitter.com/ThunderclapIt/status/710839966788677632
-- name: Open Media
-  image: /images/coalition/Open%20Media.gif
-  url: https://openmedia.org/
+- name: ALA
+  image: /images/coalition/ALA.png
+  url: http://www.ala.org/
+- name: The X-Lab
+  image: /images/coalition/Xlab.png
+  url: http://thexlab.org
