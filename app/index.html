@@ -12,6 +12,21 @@
   {% include form.html %}
 </article>
 
+<article class="coalition small">
+  <p>Financial backing for this campaign comes from the following organizations, and Fight for the Future's 1,000,000+ supporters:</p>
+  <section class="coalition-logos">
+    {% for member in site.data.supporters %}
+    {% if member.url %}
+    <a href="{{ member.url }}">
+      <img src="{{ member.image }}" alt="{{ member.name }}" title="{{ member.name }}">
+    </a>
+    {% else %}
+    <img src="{{ member.image }}" alt="{{ member.name }}" title="{{ member.name }}">
+    {% endif %}
+    {% endfor %}
+  </section>
+</article>
+
 <article>
   <h2 id="whats-happening">What&rsquo;s happening?</h2>
   <p>The FBI is trying <a href="http://www.wired.com/2016/02/apple-fbi-privacy-security/">force Apple</a> to write software that would act as a backdoor for millions of phones, and set a precedent that would make all of us <a href="https://www.washingtonpost.com/posteverything/wp/2016/02/18/why-you-should-side-with-apple-not-the-fbi-in-the-san-bernardino-iphone-case/">less safe.</a> Apple goes back to court on March 22nd. We need to educate as many people as possible that this is not just about one phone, it's about all of our safety. We&rsquo;ll be gathering outside the courthouse on the day of Apple's hearing, displaying and reading comments from Internet users everywhere. Want to help? Submit a comment, and change your profile image or add our banner code to your site. If you&rsquo;re in the Los Angeles area, <a href="mailto:team@fightforthefuture.org">be in touch</a> and meet us at the <a href="https://www.google.com/maps/place/US+District+Court/@33.9772736,-117.3766075,17z/">US District Court</a>.</p>
