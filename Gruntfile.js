@@ -1,6 +1,7 @@
 module.exports = function (grunt) {
   require('time-grunt')(grunt);
   require('jit-grunt')(grunt, {});
+  var saveLicense = require('uglify-save-license');
 
   grunt.initConfig({
     site: {
@@ -129,7 +130,7 @@ module.exports = function (grunt) {
       },
       javascript: {
         files: ['<%= site.app %>/_js/**/*.js'],
-        tasks: ['concat']
+        tasks: ['concat', 'uglify']
       },
       jekyll: {
         files: [
@@ -143,18 +144,17 @@ module.exports = function (grunt) {
     concat: {
       options: {
         sourceMap: true,
-        separator: grunt.util.linefeed + ';',
-        banner: '/*\n @licstart  The following is the entire license notice for the\n    JavaScript code in this page.\n\n Copyright (C) 2015 Fight for the Future\n\n The JavaScript code in this page is free software: you can\n redistribute it and/or modify it under the terms of the GNU\n General Public License (GNU GPL) as published by the Free Software\n Foundation, either version 3 of the License, or (at your option)\n any later version. The code is distributed WITHOUT ANY WARRANTY;\n without even the implied warranty of MERCHANTABILITY or FITNESS\n FOR A PARTICULAR PURPOSE. See the GNU GPL for more details.\n\n As additional permission under GNU GPL version 3 section 7, you\n may distribute non-source (e.g., minimized or compacted) forms of\n that code without the copy of the GNU GPL normally required by\n section 4, provided you include this license notice and a URL\n through which recipients can access the Corresponding Source.\n\n @licend  The above is the entire license notice\n    for the JavaScript code in this page.\n*/\n'
+        // separator: grunt.util.linefeed + ';',
       },
       server: {
         files: [
           {
             src: [
-              'node_modules/smoothscroll/smoothscroll.min.js',
+              '<%= site.app %>/_js/LICENSE',
               '<%= site.app %>/_js/controllers/**/*.js',
               '<%= site.app %>/_js/models/**/*.js',
               '<%= site.app %>/_js/views/**/*.js',
-              '<%= site.app %>/_js/main.js'
+              '<%= site.app %>/_js/main.js',
             ],
             dest: '<%= site.dist %>/js/core.js'
           },
@@ -163,6 +163,14 @@ module.exports = function (grunt) {
               '<%= site.app %>/_js/banner.js'
             ],
             dest: '<%= site.dist %>/banner.js'
+          },
+          {
+            src: [
+              '<%= site.app %>/_js/licenses/x11.js',
+              'node_modules/smoothscroll/smoothscroll.min.js',
+              '<%= site.app %>/_js/licenses/license-end.js',
+            ],
+            dest: '<%= site.dist %>/js/smoothscroll.min.js'
           }
         ]
       }
@@ -173,7 +181,7 @@ module.exports = function (grunt) {
         sourceMap: true,
         sourceMapIncludeSources: true,
         check: 'gzip',
-        banner: '/*\n @licstart  The following is the entire license notice for the\n    JavaScript code in this page.\n\n Copyright (C) 2015 Fight for the Future\n\n The JavaScript code in this page is free software: you can\n redistribute it and/or modify it under the terms of the GNU\n General Public License (GNU GPL) as published by the Free Software\n Foundation, either version 3 of the License, or (at your option)\n any later version. The code is distributed WITHOUT ANY WARRANTY;\n without even the implied warranty of MERCHANTABILITY or FITNESS\n FOR A PARTICULAR PURPOSE. See the GNU GPL for more details.\n\n As additional permission under GNU GPL version 3 section 7, you\n may distribute non-source (e.g., minimized or compacted) forms of\n that code without the copy of the GNU GPL normally required by\n section 4, provided you include this license notice and a URL\n through which recipients can access the Corresponding Source.\n\n @licend  The above is the entire license notice\n    for the JavaScript code in this page.\n*/\n'
+        preserveComments: saveLicense
       },
       javascript: {
         files: {
