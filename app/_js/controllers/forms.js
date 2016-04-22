@@ -127,6 +127,42 @@ window.components.forms = function (doc, win) {
        * @return {object} petitionFormData - just the info the API needs
        * */
 
+      /**
+       * Compiles the form data into a JSON payload for Ajax submission
+       * @return {object} petitionFormData - just the info the API needs
+       * */
+      var tags = ['encryption'];
+      if (util.getReferrerTag())
+        tags.push(util.getReferrerTag());
+
+      var formData = new FormData();
+      formData.append('guard', '');
+      formData.append('hp_enabled', true);
+      formData.append('org', 'fftf');
+      formData.append('tag', window.location.pathname);
+      formData.append('an_id', 'dad151da-e162-4ec5-8679-655bfcb2d03f');
+      formData.append('an_website', win.location.origin);
+      formData.append('an_tags', JSON.stringify(tags));
+
+      formData.append('member[email]', doc.getElementById('form-email').value);
+      formData.append('member[postcode]', doc.getElementById('form-zip_code').value);
+      formData.append('member[country]', countrySelect.value);
+
+      if (doc.getElementById('form-street_address')) {
+        formData.append('member[street_address]', doc.getElementById('form-street_address').value);
+      }
+
+      if (doc.getElementById('form-first_name')) {
+        formData.append('member[first_name]', doc.getElementById('form-first_name').value);
+      }
+
+      if (doc.getElementById('form-comments')) {
+        formData.append('action_comment', doc.getElementById('form-comments').value);
+      }
+
+      return formData;
+
+      /*
       var
         petitionFormData = {
           identifier: 'dad151da-e162-4ec5-8679-655bfcb2d03f',
@@ -141,6 +177,7 @@ window.components.forms = function (doc, win) {
         };
 
       return JSON.stringify(petitionFormData);
+      */
     }
 
     function loadSignatureResponse() {
@@ -155,8 +192,7 @@ window.components.forms = function (doc, win) {
       }
     }
 
-    commitmentStatus.open('POST', commitmentForm.dataset.host + '/submission', true);
-    commitmentStatus.setRequestHeader('Content-Type', 'application/json');
+    commitmentStatus.open('POST', 'https://queue.fightforthefuture.org/action', true);
     commitmentStatus.addEventListener('error', handleSigningError);
     commitmentStatus.addEventListener('load', loadSignatureResponse);
     commitmentStatus.send(compilePayload());
