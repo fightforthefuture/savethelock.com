@@ -140,9 +140,8 @@ window.components.forms = function (doc, win) {
       formData.append('hp_enabled', true);
       formData.append('org', 'fftf');
       formData.append('tag', window.location.pathname);
-      formData.append('an_id', 'dad151da-e162-4ec5-8679-655bfcb2d03f');
-      formData.append('an_website', win.location.origin);
       formData.append('an_tags', JSON.stringify(tags));
+      formData.append('an_petition', doc.getElementById('petition-form').action.replace('/signatures', ''));
 
       formData.append('member[email]', doc.getElementById('form-email').value);
       formData.append('member[postcode]', doc.getElementById('form-zip_code').value);
@@ -193,6 +192,7 @@ window.components.forms = function (doc, win) {
     }
 
     commitmentStatus.open('POST', 'https://queue.fightforthefuture.org/action', true);
+    // commitmentStatus.open('POST', 'http://localhost:9001/action', true);
     commitmentStatus.addEventListener('error', handleSigningError);
     commitmentStatus.addEventListener('load', loadSignatureResponse);
     commitmentStatus.send(compilePayload());
